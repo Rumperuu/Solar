@@ -1,0 +1,19 @@
+/*
+ *  JUSTIFICATION FOR NOT HAVING SEPERATE CLASSES FOR PLANETS AND MOONS
+ *
+ *  I did originally have that, but once I implemented the ability to switch the focused planet
+ *  (press the numbers keys), differentiating between 'planet' and 'moon' became meaningless as 
+ *  any given point was either the centre point (as represented by the `CentrePoint` class) or a
+ *  satellite of it. The only difference between a planet-type and moon-type satellite was whether 
+ *  they orbited the centre point in the Sol view, or another satellite. As such, having separate
+ *  classes for them seemed incorrect, so I went for overloaded constructors instead. It would be 
+ *  easy enough to return to `Planet` and `Moon` classes that extend `Satellite` with their seperate
+ *  constructors, however. As per polymorphism any instance of a `Satellite` object being expected
+ *  in `Solar` could take a `Planet` or `Moon` object as its argument and be fine, so `Solar` might
+ *  not even have to be changed at all.
+ *
+ *  However, I've included an alternate version with Moon and Planet classes that is fully functional,
+ *  to demonstrate my understanding of inheritance and polymorphism. As this was completed after the
+ *  review, I've marked it as such and included the original version with the overloaded constructors
+ *  that was marked.[NOTE: This alternate version has not been included here]
+ */
